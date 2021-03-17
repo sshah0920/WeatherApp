@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Merriweather', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background:url(/icons/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255,255,255,0.01); 
+    width: 300px;
+    height: 400px;
+    align-items: center;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.5);
+}
+
+.title {
+    padding: 25px 30px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.container .title h3 {
+    text-align: center;
+}
+
+.container .notification {
+    color: #ffffff;
+    background: rgb(243, 113, 48);
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
+/* Weather Container */
+
+.weather-container .weather-image img {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+}
+
+.weather-container .temp-location p{
+    text-align: center;
+    font-size: medium;
+}
+
+.weather-container .temp-desc p{
+    text-align: center;
+    font-size: smaller;
+}
+
+.weather-container .temp-value p{
+    text-align: center;
+    font-size: x-large;
+}
+
+.weather-container .temp-value span{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 1000;
+}
