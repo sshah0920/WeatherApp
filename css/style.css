@@ -21,7 +21,7 @@ body {
 
 .container {
     background: rgba(255,255,255,0.01); 
-    width: 300px;
+    width: 280px;
     height: 400px;
     align-items: center;
     box-shadow: 0 5px 15px 0 rgba(0,0,0,0.5);
@@ -44,12 +44,12 @@ body {
 
 .container .notification {
     color: #ffffff;
-    background: rgb(243, 113, 48);
+    background: rgb(48,75,92, 0.1);
     padding: 8px 10px;
     text-align: center;
-    border-radius: 5px;
+    text-transform: capitalize;
     margin-bottom: 10px;
-    border: 1px solid #f5c6cb;
+    border: 1px solid rgb(48,75,92);
     display: none;
 }
 
@@ -57,28 +57,42 @@ body {
 
 .weather-container .weather-image img {
     display: block;
-    margin: 0 auto;
-    height: 100px;
-    width: 100px;
+    margin: auto;
+    height: 170px;
+    width: 170px;
+    color: snow;
 }
 
 .weather-container .temp-location p{
     text-align: center;
+    font-size: 24px;
+    color: snow;
+}
+.weather-container .temp-title p{
+    text-align: center;
     font-size: medium;
+    padding-top: 15px;
+    color: snow;
 }
 
 .weather-container .temp-desc p{
     text-align: center;
-    font-size: smaller;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: snow;
 }
 
 .weather-container .temp-value p{
     text-align: center;
-    font-size: x-large;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 15px;
+    color: snow;
 }
 
 .weather-container .temp-value span{
     text-align: center;
-    font-size: x-large;
-    font-weight: 1000;
+    font-size: 24px;
+    font-weight: bold;
+    color: snow;
 }

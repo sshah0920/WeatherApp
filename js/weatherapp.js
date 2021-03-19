@@ -7,10 +7,11 @@ const notifElement = document.querySelector (".notification");
 const weather = {};
 
 weather.temperature = {
-    unit: "Celsius"
+    unit: "Fahreinheit"
 }
 
-const Fahreinheit = 273;
+
+const Fahreinheit = 273.15;
 
 const key = "e0f3620b70ce5624f312fc0522b2678d";
 
@@ -18,13 +19,13 @@ if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition, showError);
 } else {
     notifElement.style.display = "block";
-    notifElement.innerHTML = "<p> Unable to acccess</p>";
+    notifElement.innerHTML = "<p>Unable to acccess</p>";
 }
 
 function setPosition(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-
+    let latitude = 42.8864468; //position.coords.latitude
+    let longitude = -78.8783689; //position.coords.longitude
+ 
     getWeather(latitude, longitude);
 }
 
@@ -42,7 +43,7 @@ function getWeather(latitude, longitude) {
             return data;
         })
         .then(function(data) {
-            weather.temperature.value = Math.floor(data.main.temp - Fahreinheit);
+            weather.temperature.value = Math.floor(((data.main.temp - Fahreinheit) * 1.8) + 32);
             weather.description = data.weather[0].description;
             weather.iconId = data.weather[0].icon;
             weather.city = data.name;
@@ -57,5 +58,5 @@ function displayWeather() {
     imageElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
     valueElement.innerHTML = `${weather.temperature.value}°<span>F</span>`;
     descElement.innerHTML = weather.description;
-    locationElement.innerHTML = ` Location: ${weather.city}, ${weather.country}`;
+    locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
