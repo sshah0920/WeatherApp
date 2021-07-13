@@ -23,8 +23,8 @@ if ('geolocation' in navigator) {
 }
 
 function setPosition(position) {
-    let latitude = 42.8864468; //position.coords.latitude
-    let longitude = -78.8783689; //position.coords.longitude
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
  
     getWeather(latitude, longitude);
 }
